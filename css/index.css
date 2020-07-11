@@ -3911,6 +3911,51 @@ img {
     display: block !important;
   }
 }
+#vcomment button {
+  padding: 0.3rem 0.8rem;
+  border-color: #fff;
+  background-color: #49b1f5;
+  color: #fff;
+  font-size: 0.7rem;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#vcomment button:hover {
+  background-color: #ff7242;
+}
+#vcomment .vimg {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#vcomment .vimg:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+#vcomment .vat {
+  padding: 0 0.8rem;
+  border: 1px solid #49b1f5;
+  border-radius: 5px;
+  color: #49b1f5;
+  font-size: 0.7125rem;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#vcomment .vat:hover {
+  background-color: #49b1f5;
+  color: #fff;
+}
 .fireworks {
   position: fixed;
   top: 0;
@@ -4879,6 +4924,16 @@ blockquote.pullquote.right {
 }
 [data-theme='dark'] .mermaid {
   filter: brightness(0.7);
+}
+[data-theme='dark'] #vcomment .vbtn,
+[data-theme='dark'] #vcomment .vat {
+  border: 1px solid rgba(255,255,255,0.6);
+  background: #121212 !important;
+  color: rgba(255,255,255,0.6) !important;
+}
+[data-theme='dark'] #vcomment .vbtn:hover,
+[data-theme='dark'] #vcomment .vat:hover {
+  background: #454545 !important;
 }
 [data-theme='dark'] #local-search {
   background: #121212;
