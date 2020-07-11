@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-10T11:41:03.570Z</updated>
+  <updated>2020-07-11T01:25:30.230Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>fzq</title>
-    <link href="http://yoursite.com/2020/07/10/fzq/"/>
-    <id>http://yoursite.com/2020/07/10/fzq/</id>
-    <published>2020-07-10T11:14:04.000Z</published>
-    <updated>2020-07-10T11:41:03.570Z</updated>
+    <title>ceshi</title>
+    <link href="http://yoursite.com/2020/07/11/ceshi/"/>
+    <id>http://yoursite.com/2020/07/11/ceshi/</id>
+    <published>2020-07-11T01:24:25.000Z</published>
+    <updated>2020-07-11T01:25:30.230Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>test</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>![](/Users/fanziqi/blog/source/_posts/ceshi/截屏2020-07-11 上午9.25.15.png)</p>]]></content>
     
     <summary type="html">
     
@@ -35,8 +35,6 @@
     </summary>
     
     
-    
-      <category term="test" scheme="http://yoursite.com/tags/test/"/>
     
   </entry>
   
