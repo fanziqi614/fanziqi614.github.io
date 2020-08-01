@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.fanis.cloud/"/>
-  <updated>2020-08-01T03:07:34.824Z</updated>
+  <updated>2020-08-01T03:11:31.670Z</updated>
   <id>https://www.fanis.cloud/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>stm32-suo</title>
+    <title>stm32库函数及缩写</title>
     <link href="https://www.fanis.cloud/2020/08/01/stm32-suo/"/>
     <id>https://www.fanis.cloud/2020/08/01/stm32-suo/</id>
     <published>2020-08-01T03:06:58.000Z</published>
-    <updated>2020-08-01T03:07:34.824Z</updated>
+    <updated>2020-08-01T03:11:31.670Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="缩写定义"><a href="#缩写定义" class="headerlink" title="缩写定义"></a>缩写定义</h2><table><thead><tr><th align="left">缩写</th><th>外设/单元</th></tr></thead><tbody><tr><td align="left">ADC</td><td>模数转换器</td></tr><tr><td align="left">BKP</td><td>备份寄存器</td></tr><tr><td align="left">CAN</td><td>控制器局域网模块</td></tr><tr><td align="left">DMA</td><td>直接内存存取控制器</td></tr><tr><td align="left">EXTI</td><td>外部中断事件控制器</td></tr><tr><td align="left">FLASH</td><td>闪存存储器</td></tr><tr><td align="left">GPIO</td><td>通用输入输出</td></tr><tr><td align="left">I2C</td><td>内部集成电路</td></tr><tr><td align="left">IWDG</td><td>独立看门狗</td></tr><tr><td align="left">NVIC</td><td>嵌套中断向量列表控制器</td></tr><tr><td align="left">PWR</td><td>电源/功耗控制</td></tr><tr><td align="left">RCC</td><td>复位与时钟控制器</td></tr><tr><td align="left">RTC</td><td>实时时钟</td></tr><tr><td align="left">SPI</td><td>串行外设接口</td></tr><tr><td align="left">SysTick</td><td>系统嘀嗒定时器</td></tr><tr><td align="left">TIM</td><td>通用定时器</td></tr><tr><td align="left">TIM1</td><td>高级控制定时器</td></tr><tr><td align="left">USART</td><td>通用同步异步接收发射端</td></tr><tr><td align="left">WWDG</td><td>窗口看门狗</td></tr></tbody></table><h2 id="固态函数库命名规则"><a href="#固态函数库命名规则" class="headerlink" title="固态函数库命名规则"></a>固态函数库命名规则</h2><p>PPP 表示任一外设缩写，例如：ADC。</p><p>系统、源程序文件和头文件命名都以<strong>“stm32f10x_”</strong>作为开头，例如：<strong>stm32f10x_conf.h</strong>。</p><p>常量仅被应用于一个文件的，定义于该文件中；被应用于多个文件的，在对应头文件中定义。所有常量都由英文字母大写书写。</p><p>寄存器作为常量处理。他们的命名都由英文字母大写书写。在大多数情况下，他们采用与缩写规范与本用户手册一致。</p><p>外设函数的命名以该外设的缩写加下划线为开头。每个单词的第一个字母都由英文字母大写书写，例如：<strong>SPI_SendData**</strong>。** 在函数名中，只允许存在一个下划线，用以分隔外设缩写和函数名的其它部分。</p><p>名为 <strong>PPP_Init</strong> 的函数，其功能是根据 <strong>PPP_InitTypeDef</strong> 中指定的参数，初始化外设 PPP，例如 <strong>TIM_Init</strong>. 文档和库规范</p><p>名为 <strong>PPP_DeInit</strong> 的函数，其功能为复位外设 PPP 的所有寄存器至缺省值，例如 <strong>TIM_DeInit</strong>. </p><p>名为 <strong>PPP_StructInit</strong> 的函数，其功能为通过设置 <strong>PPP_InitTypeDef</strong> 结构中的各种参数来定义外设的功能，例如：<strong>USART_StructInit</strong></p><p>名为 <strong>PPP_Cmd</strong> 的函数，其功能为使能或者失能外设 PPP，例如： <strong>SPI_Cmd</strong>. </p><p>名为 <strong>PPP_ITConfig</strong> 的函数，其功能为使能或者失能来自外设 PPP 某中断源，例如： <strong>RCC_ITConfig</strong>. </p><p>名为 <strong>PPP_DMAConfig</strong> 的函数，其功能为使能或者失能外设 PPP 的 DMA 接口，例如：<strong>TIM1_DMAConfig</strong>. </p><p>用以配置外设功能的函数，总是以字符串“Config”结尾，例如 <strong>GPIO_PinRemapConfig</strong>. </p><p>名为 <strong>PPP_GetFlagStatus</strong> 的函数，其功能为检查外设 PPP 某标志位被设置与否，例如：<strong>I2C_GetFlagStatus</strong>. </p><p>名为 <strong>PPP_ClearFlag</strong> 的函数，其功能为清除外设 PPP 标志位，例如：<strong>I2C_ClearFlag</strong>. </p><p>名为 <strong>PPP_GetITStatus</strong> 的函数，其功能为判断来自外设 PPP 的中断发生与否，例如：<strong>I2C_GetITStatus</strong>. </p><p>名 为 <strong>PPP_ClearITPendingBit</strong> 的函数，其功能为清除外设 PPP 中断待处理标志位，例如：<strong>I2C_ClearITPendingBit</strong>. </p>]]></content>
     
@@ -36,6 +36,8 @@
     
     
     
+      <category term="stm32" scheme="https://www.fanis.cloud/tags/stm32/"/>
+    
   </entry>
   
   <entry>
@@ -43,7 +45,7 @@
     <link href="https://www.fanis.cloud/2020/07/29/stm32-for-mac/"/>
     <id>https://www.fanis.cloud/2020/07/29/stm32-for-mac/</id>
     <published>2020-07-29T03:24:07.000Z</published>
-    <updated>2020-07-29T04:21:46.768Z</updated>
+    <updated>2020-08-01T03:13:28.572Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>我的主力机是macOS系统，但是最近在学习stm32的时候发现Keil只有Windows的版本，虽然用Parallel虚拟机可以融合双系统来使用Keil，但是开发过程中虚拟的win进程占用了不少内存，电脑大量发热，续航也下降了。这里介绍一种在macOS上开发stm32的方法。</p><h2 id="2-检查ST-Link驱动"><a href="#2-检查ST-Link驱动" class="headerlink" title="2.检查ST-Link驱动"></a>2.检查ST-Link驱动</h2><p>首先检查mac是否安装了stlink驱动。将单片机通电，通过ST-Link连接到电脑，打开<code>系统信息.app</code>，在<em>硬件-&gt;USB-&gt;USB 3.1 总线</em>下可以看到STM32 STLink驱动已经安装，说明此驱动在macos上免驱。</p><p><img src= "/img/loading.gif" data-src="/2020/07/29/stm32-for-mac/1.png" alt="1"></p><h2 id="3-安装sw4stm32"><a href="#3-安装sw4stm32" class="headerlink" title="3.安装sw4stm32"></a>3.安装sw4stm32</h2><p>在<a href="http://openstm32.org/HomePage" target="_blank" rel="noopener">OpenSTM32</a>官网上，下滑找到到<code>Step 1</code>，点最后一句的<code>download area</code>。</p><p><img src= "/img/loading.gif" data-src="/2020/07/29/stm32-for-mac/2.png" alt="2"></p><p>点击，即可下载macOS的版本，，但是官网下载速度奇慢，而且需要注册账号，有时还会遇到无法注册的问题。这里提供v2.6版本的安装包<a href>点击下载</a></p><p>下载后，打开终端，cd到<code>install_sw4stm32_macos_64bits-v2.6.run</code>所在路径，执行以下命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 install_sw4stm32_macos_64bits-v2.6.run</span><br><span class="line">./install_sw4stm32_macos_64bits-v2.6.run</span><br></pre></td></tr></table></figure><p>等待一段时间弹出安装器</p><p><img src= "/img/loading.gif" data-src="/2020/07/29/stm32-for-mac/5.png" alt="5"></p><p>next安装</p><p>这一步记得检查stlinkserver是否勾选</p><p><img src= "/img/loading.gif" data-src="/2020/07/29/stm32-for-mac/6.png" alt="6"></p><p>点击next</p><p>然后记得到终端输入密码，否则安装不会进行。</p><p><img src= "/img/loading.gif" data-src="/2020/07/29/stm32-for-mac/7.png" alt="7"></p><p>接着会弹出</p><p><img src= "/img/loading.gif" data-src="/2020/07/29/stm32-for-mac/8.png" alt="8"></p><p>点击 <code>yes</code> 即可，一会即可安装完成。</p><p>打开装好的 SystemWorkbench, 先选择一个文件夹作为工作空间:</p><p><img src= "/img/loading.gif" data-src="/2020/07/29/stm32-for-mac/9.png" alt="9"></p><p>然后, 会自动安装ARM工具链:</p><p><img src= "/img/loading.gif" data-src="/2020/07/29/stm32-for-mac/10.png" alt="10"></p><h2 id="4-安装stlink工具"><a href="#4-安装stlink工具" class="headerlink" title="4.安装stlink工具"></a>4.安装stlink工具</h2><p>stlink是命令行工具，需要使用命令行安装工具，推荐brew。</p><p>未安装brew的先安装brew</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure><p>用brew安装stlink</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install stlink</span><br></pre></td></tr></table></figure><h2 id="6-安装STM32CubeMX"><a href="#6-安装STM32CubeMX" class="headerlink" title="6.安装STM32CubeMX"></a>6.安装STM32CubeMX</h2><p>前言：请确保已经安装最新的Java，安装方式请百度</p><p> <a href="http://www.st.com/en/development-tools/stm32cubemx.html" target="_blank" rel="noopener">下载STM32CubeMX</a>, 下面的<code>Get Software</code>。 文件名<code>en.stm32cubemx.zip</code>, 下载完解压, 你会发现一个名为<code>SetupSTM32CubeMX-4.10.0.exe</code>的文件。这个文件不是Windows PE文件（Windows可执行文件格式），它只是一个JAR压缩文件。因此，使用终端即可安装:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo java -jar ~/Downloads/SetupSTM32CubeMX-4.10.0.exe</span><br></pre></td></tr></table></figure><p>sudo需要输入密码，按提示输入即可，会弹出安装器</p><p><img src= "/img/loading.gif" data-src="/2020/07/29/stm32-for-mac/3.png" alt="3"></p><p>next安装。</p><p>按照安装指导。默认情况下，该程序被安装在/Applications/STMicroelectronics/STM32Cube/STM32CubeMX</p><p>在启动台可以看到刚刚安装的STM32CubeMX。</p><p><img src= "/img/loading.gif" data-src="/2020/07/29/stm32-for-mac/4.png" alt="4"></p>]]></content>
     
@@ -57,6 +59,10 @@
     </summary>
     
     
+    
+      <category term="stm32" scheme="https://www.fanis.cloud/tags/stm32/"/>
+    
+      <category term="macOS" scheme="https://www.fanis.cloud/tags/macOS/"/>
     
   </entry>
   
