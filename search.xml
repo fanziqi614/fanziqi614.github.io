@@ -235,6 +235,9 @@
 
 <p>祝建站成功～</p>
 ]]></content>
+      <tags>
+        <tag>web</tag>
+      </tags>
   </entry>
   <entry>
     <title>stm32_for_mac</title>
@@ -392,6 +395,34 @@
 ]]></content>
       <tags>
         <tag>stm32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>利用注册表实现软件免安装</title>
+    <url>/2020/08/01/regedit/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我有一个Windows虚拟机，平时用solidworks或者Altium Designer这类软件都在虚拟机中运行，最近电脑内存吃紧，软件在虚拟机中的垃圾缓存越来越大，所以想把软件迁移到外置的系统盘里，由于这些软件安装起来十分麻烦，需要绿色/汉化一系列步骤，所以如果能将软件本地化就很方便了。这里利用导出软件注册表实现软件在不同系统中迁移。</p>
+<p>这里以<strong>Altium Designer</strong>为例</p>
+<p>1.<strong>win+r</strong>打开运行，输入<strong>regedit</strong>会车，打开<strong>注册表编辑器</strong></p>
+<p><img src= "/img/loading.gif" data-src="/2020/08/01/regedit/1.png" alt="1"></p>
+<p>2.点击注册表编辑器工具栏中的<strong>编辑</strong>，在下拉菜单中点击：<strong>查找</strong></p>
+<p><img src= "/img/loading.gif" data-src="/2020/08/01/regedit/2.png" alt="2"></p>
+<p>在查找窗口的<strong>查找目标</strong>中输入软件名称，如：<strong>Altium Designer</strong>，点击：<strong>查找下一个</strong>；</p>
+<p><img src= "/img/loading.gif" data-src="/2020/08/01/regedit/3.png" alt="3"></p>
+<p>找到该软件的最上层路径，这里为<strong>Altium</strong></p>
+<p><img src= "/img/loading.gif" data-src="/2020/08/01/regedit/4.png" alt="4"></p>
+<p>3.右击该文件夹，选择导出</p>
+<p><img src= "/img/loading.gif" data-src="/2020/08/01/regedit/5.png" alt="5"></p>
+<p>文件名任意，点击保存<br><img src= "/img/loading.gif" data-src="/2020/08/01/regedit/6.png" alt="6"></p>
+<p>将保存的注册表文件拷贝到新电脑中备用</p>
+<p><img src= "/img/loading.gif" data-src="/2020/08/01/regedit/7.png" alt="7"></p>
+<p>4.到<strong>C:\Program Files</strong>找到软件的安装路径，拷贝到新电脑的同名文件夹中</p>
+<p><img src= "/img/loading.gif" data-src="/2020/08/01/regedit/8.png" alt="8"></p>
+<p>5.在新电脑中双击注册表把这个注册信息导入注册表编辑器</p>
+<p><img src= "/img/loading.gif" data-src="/2020/08/01/regedit/9.png" alt="9"></p>
+<p>点击是，即可无需安装正常使用软件。</p>
+]]></content>
+      <tags>
+        <tag>win</tag>
       </tags>
   </entry>
 </search>
