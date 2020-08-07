@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.fanis.cloud/"/>
-  <updated>2020-08-06T04:15:53.594Z</updated>
+  <updated>2020-08-07T06:54:52.005Z</updated>
   <id>https://www.fanis.cloud/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>32单片机缩写</title>
+    <link href="https://www.fanis.cloud/2020/08/07/stm32_EN/"/>
+    <id>https://www.fanis.cloud/2020/08/07/stm32_EN/</id>
+    <published>2020-08-07T05:42:28.000Z</published>
+    <updated>2020-08-07T06:54:52.005Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>IRQ: Interrupt Request 中断请求</p><p>RCC: Rest and Clock Control 复位与时钟控制</p><p>HAL: Hardware Abstraction Layer硬件抽象层,代表HAL库</p><p>DMA: Direct Memory Access 直接内存存取</p><p>EX: extended 延伸，扩展</p><p>PWR: Power Controller 电源控制</p><p>Conf: configuration</p><p>It: interrupt</p><p>MSP: Mixed Signal Processor混合信号处理器</p><p>RSSI: Received Signal Strength Indication接收的信号强度指示</p><p>SNR: 信噪比SIGNAL-NOISE RATIO</p><p>上下行同信：上行（终端-&gt;网关；上传），下行（网关-&gt;终端；接收</p><p>EXTI: （External interrupt/event controller）—外部中断/事件控制器</p><p>idel: 空闲</p><p>RF_CAD:The radio is doing channel activity detection</p><p>FSK:Frequency-shift keying频移键控，是信息传输中使用得较早的一种调制方式,它的主要优点是: 实现起来较容易,抗噪声与抗衰减的性能较好。在中低速数据传输中得到了广泛的应用。</p><p>PHY: Port Physical Layer，中文可称之为端口物理层，是一个对OSI模型物理层的共同简称。</p><p>MAC：Media Access Control 介质访问控制</p><p>PLL: PhaseLockedLoop锁相环</p><p>APB: Advanced Peripheral BUS 外围总线</p><p>AHB，是Advanced High performance Bus的缩写，译作高级高性能总线，这是一种“系统总线”。</p><p>MSP: MCU Specific Package</p><p>Int 初始化 deint反初始化</p><p>Transmit：传输；传播；发射；传达；遗传，发送</p><p>Init：初始化（initialization）</p><p>clock：时钟；计时器</p><p>system：制度，体制；系统；方法</p><p>Config：配置，布局；显示配置信息命令</p><p>USART：代表串口(Universal Synchronous/Asynchronous Receiver/Transmitter)通用同步/异步串行接收/发送器</p><p>GPIO：general purpose input/output 代表引脚， （通用输入/输出）简称为GPIO</p><p>SPI：SPI是串行外设接口（Serial Peripheral Interface）的缩写</p><p>RTC：实时时钟（Real-Time Clock）</p><p>ADC：ADC,Analog-to-Digital Converter的缩写,指模/数转换器或者模数转换器</p><p>Channel： 通道；频道；海峡</p><p>ARM：Advanced RISC Machine</p><p>AAPCS：ARM Architecture Process call standard</p><p>ARM 体系结构过程调用标准</p><p>RISC： Reduced Instruction Set Computer 精简指令集计算机</p><p>RTOS：Real Time Operating System 实时操作系统</p><p>DMA：Direct Memory Access 存储器直接访问</p><p>EXTI: External Interrupts 外部中断</p><p>FSMC: Flexible static memory controller 可变静态存储控制器</p><p>FPB：flash patch and breakpoint FLASH 转换及断电单元</p><p>HSE：Hign speed external</p><p>HSI: High speed internal</p><p>LSE: Low Speed external</p><p>LSI: Low Speed Internal</p><p>LSU: load store unit 存取单元</p><p>PFU: prefetch unit 预取单元</p><p>ISR：Interrupt Service Routines 中断服务程序</p><p>NMI: Nonmaskable Interrupt 不可屏蔽中断</p><p>NVIC: Nested Vectored Interrupt Controller 嵌套向量中断控制器</p><p>MPU: Memory Protection Unit 内存保护单元</p><p>MIPS:million instructions per second 每秒能执行的百万条指令的条数</p><p>RCC：Reset and clock control 复位和时钟控制</p><p>RTC: Real-Time Clock 实时时钟</p><p>IWDG: independent watchdog 独立看门狗</p><p>WWDG：Window watchdog 窗口看门狗</p><p>TIM：timer 定时器</p><p>GAL:generic array logic 通用阵列逻辑</p><p>PAL:programmable array logic 可编程阵列逻辑</p><p>ASIC:Application Specific Integrated Circuit 专用集成电路</p><p>FPGA:Field－Programmable Gate Array 现场可编程门阵列</p><p>CPLD:Complex Programmable Logic Device 可编程逻辑器件</p><p>端口</p><p>AFIO：alternate function IO 复用 IO 端口</p><p>GPIO：general purpose input/output 通用 IO 端口</p><p>IOP（A-G）:IO port A - IO port G (例如：IOPA:IO port A)</p><p>CAN：Controller area network 控制器局域网</p><p>FLITF：The Flash memory interface 闪存存储器接口</p><p>I2C： Inter-integrated circuit 微集成电路</p><p>IIS： integrate interface of sound 集成音频接口</p><p>JTAG：joint test action group 联合测试行动小组</p><p>SPI：Serial Peripheral Interface 串行外围设备接口 SDIO: SD I/O</p><p>UART: Universal Synchr./Asynch. Receiver Transmitter 通用异步接收/发送装置</p><p>USB: Universal Serial Bus 通用串行总线</p><p>寄存器相关</p><p>CPSP： Current Program Status Register 当前程序状态寄存器</p><p>SPSP： saved program status register 程序状态备份寄存器</p><p>CSR：clock control/status register 时钟控制状态寄存器</p><p>LR： link register 链接寄存器</p><p>SP： stack pointer 堆栈指针</p><p>MSP: main stack pointer 主堆栈指针</p><p>PSP：process stack pointer</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+      <category term="stm32" scheme="https://www.fanis.cloud/tags/stm32/"/>
+    
+  </entry>
   
   <entry>
     <title>stm32学习笔记</title>
