@@ -677,6 +677,8 @@ NVIC_Init();</code></pre></li>
 <li><p>获取通道捕获值</p>
 <p><code>uint32_t TIM_GetCapture1(TIM_TypeDef* TIMx)；</code></p>
 </li>
+</ul>
+<ul>
 <li><p>输入捕获的一般配置步骤：</p>
 <ol>
 <li>初始化定时器和通道对应IO的时钟。</li>
@@ -688,6 +690,36 @@ NVIC_Init();</code></pre></li>
 <li>使能定时器：TIM_Cmd();</li>
 <li>编写中断服务函数：TIMx_IRQHandler();</li>
 </ol>
+</li>
+</ul>
+<hr>
+<h2 id="DMA"><a href="#DMA" class="headerlink" title="DMA"></a>DMA</h2><p>DMA，全称Direct Memory Access，即直接存储器访问。</p>
+<p>DMA的出现就是为了解决批量数据的输入/输出问题。DMA是指外部设备不通过CPU而直接与系统内存交换数据的接口技术。这样数据的传送速度就取决于存储器和外设的工作速度。</p>
+<ul>
+<li><p>初始化函数：</p>
+<p><code>void DMA_Init(DMA_Channel_TypeDef* DMAy_Channelx, DMA_InitTypeDef* DMA_InitStruct);</code></p>
+</li>
+<li><p>2个使能函数:</p>
+<ul>
+<li><code>void DMA_Cmd(DMA_Channel_TypeDef* DMAy_Channelx, FunctionalState NewState);</code>//使能DMA通道</li>
+<li><code>void DMA_ITConfig(DMA_Channel_TypeDef* DMAy_Channelx, uint32_t DMA_IT, FunctionalState NewState);</code>//使能DMA通道中断</li>
+</ul>
+</li>
+<li><p>2个传输数据量函数</p>
+<ul>
+<li><code>void DMA_SetCurrDataCounter(DMA_Channel_TypeDef* DMAy_Channelx, uint16_t DataNumber);</code>//设置DMA通道的传输数据量（DMA处于关闭状态）</li>
+<li><code>uint16_t DMA_GetCurrDataCounter(DMA_Channel_TypeDef* DMAy_Channelx);</code>//获取当前DMA通道传输剩余数据量（DMA处于开启状态）</li>
+</ul>
+</li>
+<li><p>DMA的一般步骤</p>
+<ul>
+<li>使能DMA时钟。调用函数：<code>RCC_AHBPeriphClockCmd()</code>；</li>
+<li>初始化DMA通道参数。调用函数：<code>DMA_Init()</code>；</li>
+<li>使能串口DMA发送，串口DMA使能函数。调用函数：<code>USART_DMACmd()</code>；</li>
+<li>使能DMA1通道，启动传输。调用函数：<code>DMA_Cmd()</code>；</li>
+<li>查询DMA传输状态。调用函数：<code>DMA_GetFlagStatus()</code>；</li>
+<li>获取/设置通道当前剩余数据量。调用函数：<code>DMA_GetCurrDataCounter()</code>；<code>DMA_SetCurrDataCounter()</code>。</li>
+</ul>
 </li>
 </ul>
 ]]></content>
